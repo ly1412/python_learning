@@ -27,3 +27,4 @@ if __name__ == "__main__":
     s0 = (0., 1., 0.)
     t = np.arange(0, 30, 0.01)
     s = odeint(lorenz, s0, t)
+    print(s)
