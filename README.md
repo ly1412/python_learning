@@ -15,3 +15,5 @@ log10(N!)=log10(1)+log10(2)+...log10(N);
 只需要计算range(2, math.sqrt(x) + 1)中的所有素数是否被整除，不必判断合数
 ### filter用法
 filter(isFunction, list())
+### np tile用法
+np.tile(5, n).astype(np.float)  初始化n个初始值为5的array，类型为np.float
