@@ -17,3 +17,5 @@ log10(N!)=log10(1)+log10(2)+...log10(N);
 filter(isFunction, list())
 ### np tile用法
 np.tile(5, n).astype(np.float)  初始化n个初始值为5的array，类型为np.float
+### pyplot scatter 参数用法
+s: 点大小，c：颜色k=black
