@@ -19,3 +19,8 @@ filter(isFunction, list())
 np.tile(5, n).astype(np.float)  初始化n个初始值为5的array，类型为np.float
 ### pyplot scatter 参数用法
 s: 点大小，c：颜色k=black
+### np.clip函数
+clip(min, max)
+### pyplot.figure figsize参数
+(9, 7) width = 9英寸，height=7英寸
+
