@@ -23,4 +23,15 @@ s: 点大小，c：颜色k=black
 clip(min, max)
 ### pyplot.figure figsize参数
 (9, 7) width = 9英寸，height=7英寸
+### pyplot.savefig
+pyplot.savefig("1.png")
+### pandas 拼接
+append(deprecated, ignore_index=True)
+### pandas 重定义index name
+rename(index={15: 'Total'})
+### pandas reindex
+reindex(columns=data.columns, fill_value=0) fill_value空值自动填充，索引是自动的
+### pandas apply
+data.apply(enum_row, axis=1) axis控制方向 0为横向方向，按列枚举，1为纵向方向按行枚举,以enum_row函数进行逐行处理
+
 
