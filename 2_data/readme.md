@@ -46,3 +46,7 @@ auc = metrics.auc(fpr, tpr) or  auc = metrics.roc_auc_score(y_test_one_hot, y_te
 auc = metrics.roc_auc_score(y_test_one_hot, y_test_one_hot_hat, average='macro')
 ## pyplot的xticks即x轴的刻度设置,如:以月份在x轴显示
 plt.xsticks(x, calendar.month_name[1:13], color='blue', rotation=60)
+## np.ptp 扁平化后寻找峰值
+array = np.array([[0, 1, 2, 3], [4, 5, 6, 7]])
+array_output1 = np.ptp(array)
+返回7
