@@ -22,7 +22,7 @@ array([[1, 0, 0, 0],
 dict(list(zip(np.arange(n_columns), columns)))
 ## pandas rename，pandas dataframe定义新列名
 data.rename(columns=new_columns, inplace=True)
-## pandas.get_dummies
+## pandas.get_dummies return DataFrame
 s = pd.Series(['男', '女'])
 print(type(pd.get_dummies(s)))
 print(pd.get_dummies(s))
@@ -35,3 +35,14 @@ x, x_test, y, y_test = train_test_split(x, y, test_size=0.3)
 clf = RandomForestClassifier(n_estimators=50, max_depth=7)
 ## 精确度计算（真实值，预测值）
 metrics.accuracy_score(y_test, y_test_hat)
+## pandas ravel()
+函数将展平的基础数据作为ndarray返回
+## roc曲线计算
+fpr, tpr, _ = metrics.roc_curve(y_test_one_hot.ravel(), y_test_one_hot_hat.ravel())
+## auc值计算 
+### Micro AUC
+auc = metrics.auc(fpr, tpr) or  auc = metrics.roc_auc_score(y_test_one_hot, y_test_one_hot_hat, average='micro')
+### Macro 
+auc = metrics.roc_auc_score(y_test_one_hot, y_test_one_hot_hat, average='macro')
+## pyplot的xticks即x轴的刻度设置,如:以月份在x轴显示
+plt.xsticks(x, calendar.month_name[1:13], color='blue', rotation=60)

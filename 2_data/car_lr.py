@@ -49,9 +49,12 @@ if __name__ == '__main__':
     n_class = len(np.unique(y))
 
     if n_class > 2:
+        # 多分类情况先进行one hot编码
         y_test_one_hot = label_binarize(y_test, classes=np.arange(n_class))
+        # 计算每个预测值的概率
         y_test_one_hot_hat = clf.predict_proba(x_test)
         fpr, tpr, _ = metrics.roc_curve(y_test_one_hot.ravel(), y_test_one_hot_hat.ravel())
+        # print('thresholds:', thresholds)
         print('Micro AUC:\t', metrics.auc(fpr, tpr))
         auc = metrics.roc_auc_score(y_test_one_hot, y_test_one_hot_hat, average='micro')
         print('Micro AUC(System):\t', auc)
