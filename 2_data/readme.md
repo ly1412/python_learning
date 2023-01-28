@@ -50,3 +50,10 @@ plt.xsticks(x, calendar.month_name[1:13], color='blue', rotation=60)
 array = np.array([[0, 1, 2, 3], [4, 5, 6, 7]])
 array_output1 = np.ptp(array)
 返回7
+## pd.concat
+dataframe增加列: x = pd.concat((x, t), axis=1)
+## 随机森林另种写法
+定义error 定义最大树深
+dtr = DecisionTreeRegressor(criterion='squared_error', max_depth=10) 
+定义聚合学习
+br = BaggingRegressor(dtr, n_estimators=10, max_samples=0.3)
